@@ -6,6 +6,8 @@ import javax.naming.*;
 
 import org.apache.naming.ResourceRef;
 
+//Credit: https://www.veracode.com/blog/research/exploiting-jndi-injections-java
+
  
 
 public class EvilRMIServerNew {
