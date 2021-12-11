@@ -1,4 +1,4 @@
-FROM openjdk:11 AS builder
+FROM openjdk:13-alpine AS builder
 RUN mkdir /app
 COPY . /app
 ADD https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.14/bin/apache-tomcat-10.0.14.tar.gz /app
@@ -8,7 +8,7 @@ RUN javac --add-modules jdk.naming.rmi --add-exports jdk.naming.rmi/com.sun.jndi
 
 
 
-FROM openjdk:11
+FROM openjdk:13-alpine
 EXPOSE 1097
 RUN mkdir /app
 COPY --from=builder /app/apache-tomcat-10.0.14/lib/*.jar /app/lib/

@@ -42,3 +42,11 @@ version of the vulnerable app that hacks the gadget classes into the classpath.
 Note that it's not entirely unreasonable for the relevant jars to be included -
 any full tomcat deployment (not just spring-boot's embedded tomcat) will
 definitely have them.
+
+- A note on Java versions
+Using gadgets seems to be possible even on the most current java, and
+the gadgets still exist on current versions of stuff.
+
+This compiles with a slightly older JDK just to avoid problems with the
+"internal and proprietary" ReferenceWrapper class. Recent JDKs really complain
+about that a lot - easiest solution is to just stick to one that doesn't.
